@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Actividad 2 — Formulario de divisores</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #ffffff; padding: 24px; }
+  form { display: grid; gap: 8px; max-width: 320px; }
+  label { font-weight: bold; }
+  input, button { padding: 6px; font-size: 1rem; }
+</style>
+</head>
+<body>
+<h1>Actividad 2 — Formulario</h1>
+<form action="tabla2.php" method="get">
+  <label>Divisor inicial: <input type="number" name="d_ini" value="5" required></label>
+  <label>Divisor final: <input type="number" name="d_fin" value="16" required></label>
+  <label>n mínimo: <input type="number" name="n_ini" value="50" required></label>
+  <label>n máximo: <input type="number" name="n_fin" value="60" required></label>
+  <button type="submit">Generar tabla</button>
+</form>
+</body>
+</html>
