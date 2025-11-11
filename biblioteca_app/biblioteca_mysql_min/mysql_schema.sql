@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(32) NOT NULL UNIQUE,
+  clave VARCHAR(64) NOT NULL, 
+  tipo INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS libros (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(128) NOT NULL,
+  autor VARCHAR(64) NOT NULL,
+  isbn VARCHAR(13) NOT NULL UNIQUE,
+  puntuacion INT NOT NULL,
+  genero VARCHAR(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO usuarios (nombre, clave, tipo) VALUES
+  ('admin', MD5('admin'), 1),
+  ('user',  MD5('user'),  0)
+ON DUPLICATE KEY UPDATE nombre=VALUES(nombre);

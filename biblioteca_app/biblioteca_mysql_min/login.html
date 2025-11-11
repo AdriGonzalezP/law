@@ -1,0 +1,12 @@
+<?php include "cabecera.php"; ?>
+<h2>Login</h2>
+<form method="post" action="ComprobarLogin.php" style="display:grid;gap:10px;max-width:360px">
+  <label>Usuario
+    <input required type="text" name="nombre" autocomplete="username">
+  </label>
+  <label>Contraseña
+    <input required type="password" name="clave" autocomplete="current-password">
+  </label>
+  <button type="submit">Entrar</button>
+</form>
+<?php include "pie.php"; ?>

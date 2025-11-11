@@ -1,0 +1,21 @@
+<?php include "cabecera.php"; ?>
+<h2>Nuevo libro</h2>
+<form method="post" action="crealibro.php" style="display:grid;gap:10px;max-width:600px">
+  <label>Título
+    <input required type="text" name="nombre" maxlength="128">
+  </label>
+  <label>Autor
+    <input required type="text" name="autor" maxlength="64">
+  </label>
+  <label>ISBN
+    <input required type="text" name="isbn" maxlength="13">
+  </label>
+  <label>Puntuación (0-10)
+    <input required type="number" name="puntuacion" min="0" max="10">
+  </label>
+  <label>Género
+    <input required type="text" name="genero" maxlength="64">
+  </label>
+  <button type="submit">Guardar</button>
+</form>
+<?php include "pie.php"; ?>
